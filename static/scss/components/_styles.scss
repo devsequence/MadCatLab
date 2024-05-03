@@ -1,0 +1,245 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: $Montserrat, Helvetica, Arial, sans-serif;
+  color: $default;
+  background-color: $white;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  &.is-scroll{
+    overflow: hidden;
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: $Montserrat;
+}
+h1 {
+  font-size: 42px;
+  line-height: 42px;
+  color: $default;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 42px;
+  color: $default;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 26px;
+  color: $default;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 28px;
+  color: $default;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 26px;
+  color: $default;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+  color: $default;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+img {
+  display: block;
+  //width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+
+.row.min {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.row.min > div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overflow {
+  overflow: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+span,
+.icon {
+  transition: all 150ms ease;
+}
+button{
+  cursor: pointer;
+}
+.wysiwyg{
+  font-size: 16px;
+  line-height: 24px;
+  color: $default;
+  p{
+    font-size: 16px;
+    line-height: 24px;
+    color: $default;
+    margin-bottom: 16px;
+  }
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.onepage-pagination{
+  display: none;
+}
+.title-section{
+  font-family: $Montserrat;
+  font-weight: 500;
+  font-size: px(44);
+  line-height: px(58);
+  color: #182528;
+  margin-bottom: 4rem;
+}
+.btn-primary{
+  transition: all ease 300ms;
+
+  &:hover{
+    background: #DB3EBE !important;
+  }
+}
+.text-page{
+  padding: px(30) 0;
+}
+.text-wrap{
+  background: #FFFFFF;
+  box-shadow: 0px 0px px(30) rgba(0, 0, 0, 0.08);
+  border-radius: px(20);
+  padding: px(30) px(30) 0;
+}
+.title-page{
+  font-weight: 500;
+  font-size: px(24);
+  line-height: px(36);
+  color: #231F20;
+  padding-bottom: px(20);
+  border-bottom: 1px solid #E4E4E4;
+}
+.text-info{
+  padding: px(25) 0;
+  font-weight: 400;
+  font-size: px(17);
+  line-height: px(32);
+  color: #231F20;
+  h4{
+    font-weight: 700;
+    font-size: px(17);
+    line-height: px(32);
+    color: #231F20;
+  }
+  p{
+    font-size: px(17);
+    line-height: px(32);
+    color: #231F20;
+  }
+  ul{
+    margin-bottom: 3rem;
+    li{
+      &:before{
+        position: relative;
+        content: '•';
+        font-size: px(17);
+        line-height: px(32);
+        color: #231F20;
+      }
+    }
+  }
+  &.list-info{
+    ul{
+      li{
+        padding-left: px(25);
+        position: relative;
+        &:before{
+          position: absolute;
+          top: 0;
+          left: px(14);
+        }
+      }
+    }
+
+  }
+}
+.link{
+  .btn-primary{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 18px() 72px;
+    background: #F84CBB;
+    box-shadow: 0px 4px 4px rgba(219, 62, 190, 0.2);
+    border-radius: 120px;
+  }
+}
+
+.woocommerce-notices-wrapper{
+  display: none;
+}
+.woocommerce-cart-form .quantity{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.cart-collaterals{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.woocommerce-cart-form .shop_table{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}

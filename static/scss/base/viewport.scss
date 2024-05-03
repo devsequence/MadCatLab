@@ -1,0 +1,64 @@
+$ViewPort: false !default;
+$point: 10;
+$pc: 1920;
+$tablet: 992;
+$mob: 320;
+$vwInit:true;
+@function px($size){
+  @if $vwInit == true {
+    @return decimal-round((($size / $pc) * 100), 2)+vw
+  } @else  {
+    @return floor(($size))+px
+  }
+}
+@function pxm($size){
+  @if $vwInit == true {
+    @return decimal-round((($size / $tablet) * 100), 2)+vw
+  } @else  {
+    @return floor(($size))+px
+  }
+}
+@function pxs($size){
+  @if $vwInit == true {
+    @return decimal-round((($size / $mob) * 100), 2)+vw
+  } @else  {
+    @return floor(($size))+px
+  }
+}
+@function decimal-round ($number, $digits: 0, $mode: round) {
+  $n: 1;
+  @if type-of($number) != number {
+    @warn '#{ $number } is not a number.';
+    @return $number;
+  }
+  @if type-of($digits) != number {
+    @warn '#{ $digits } is not a number.';
+    @return $number;
+  } @else if not unitless($digits) {
+    @warn '#{ $digits } has a unit.';
+    @return $number;
+  }
+  @for $i from 1 through $digits {
+    $n: $n * 10;
+  }
+  @if $mode == round {
+    @return round($number * $n) / $n;
+  } @else if $mode == ceil {
+    @return ceil($number * $n) / $n;
+  } @else if $mode == floor {
+    @return floor($number * $n) / $n;
+  } @else {
+    @warn '#{ $mode } is undefined keyword.';
+    @return $number;
+  }
+}
+@function vw($target, $ViewPort: $ViewPort, $digits:2) {
+  @if $ViewPort == false {
+    @return unquote($target + 'px')
+  }
+  $n: 1;
+  @for $i from 1 through $digits {
+    $n: $n * $point;
+  }
+  @return unquote(round($target/($pc * .01) * $n) / $n + 'vw');
+}

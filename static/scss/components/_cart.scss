@@ -1,0 +1,286 @@
+.product-cart, .product-form{
+  background: #FFFFFF;
+  box-shadow: 0px 0px px(30) rgba(0, 0, 0, 0.08);
+  border-radius: px(20);
+  margin-bottom: 20px;
+  padding: px(30) px(27);
+  &__title{
+    font-weight: 500;
+    font-size: px(24);
+    line-height: px(36);
+    color: #231F20;
+    padding-bottom: px(24);
+    border-bottom: 1px solid #E4E4E4;
+  }
+}
+.product-cart{
+  .total{
+    display: flex;
+    padding-top: px(30);
+    justify-content: flex-end;
+    &-title{
+      font-weight: 400;
+      font-size: px(18);
+      line-height: px(30);
+      color: #231F20;
+      margin-right: px(25);
+    }
+    &-price{
+      font-weight: 500;
+      font-size: px(18);
+      line-height: px(30);
+      color: #231F20;
+    }
+  }
+}
+.cart-item{
+  padding: px(20) 0;
+  display: flex;
+  align-content: center;
+  border-bottom: 1px solid #E4E4E4;
+  &__media{
+    width: px(90);
+    height: px(90);
+    border: 1px solid #E2E2E2;
+    border-radius: px(10);
+    box-sizing: border-box;
+    padding: px(7);
+    margin-right: px(30);
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__desc{
+    width: px(320);
+    margin: px(9) px(30) 0 0;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: px(16);
+    line-height: px(24);
+    color: #231F20;
+    a{
+      color: #231F20;
+    }
+  }
+  &__type{
+    font-size: 14px;
+    line-height: 24px;
+    color: #231F20;
+  }
+  &__subtitle{
+    font-weight: 300;
+    font-size: px(14);
+    line-height: px(24);
+    color: #231F20;
+  }
+  &__price,
+  &__count,
+  &__price-total{
+    font-weight: 400;
+    font-size: px(16);
+    line-height: px(24);
+    color: #231F20;
+    padding-top: px(9);
+  }
+  &__price{
+    width: px(150);
+  }
+  &__count{
+    width: px(150);
+  }
+  &__price-total{
+    width: px(150);
+  }
+  &__remove{
+    margin: px(9) 0 0 auto;
+    .icon{
+      width: px(25);
+      height: px(25);
+      fill: none;
+      stroke: #231F20;
+    }
+  }
+}
+.product-form{
+  &__wrap{
+    padding-top: 24px;
+  }
+  form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .popup-title{
+    width: 100%;
+    font-weight: 500;
+    font-size: px(24);
+    line-height: px(36);
+    color: #231F20;
+    padding-bottom: px(23);
+    position: relative;
+    margin-bottom: px(20);
+    text-align: left;
+    &:after{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: - px(10);
+      width: calc(100% + #{px(20)});
+      height: 1px;
+      background: #E2E2E2;
+    }
+  }
+  .label, .label-textarea{
+    width: calc(50% - #{px(14)});
+    text-align: left;
+    display: block;
+    margin-bottom: px(30);
+    span{
+      font-weight: 500;
+      font-size: px(16);
+      line-height: px(16);
+      margin-bottom: px(5);
+      color: #231F20;
+      display: block;
+    }
+    input,select{
+      width: 100%;
+      padding: px(15) px(14);
+      background: #FCFDFF;
+      border: 1px solid #D4D7E6;
+      outline: none;
+      border-radius: px(4);
+      font-weight: 300;
+      font-size: px(13);
+      line-height: px(14);
+      color: #1F2428;
+    }
+    select{
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='8' viewBox='0 0 15 8' fill='none'%3E%3Cpath d='M14 1L7.5 7L1 1' stroke='%23F84CBB' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 97% 50%;
+      background-size: px(15);
+      appearance: none;
+    }
+  }
+  .modal-group{
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    &.disabled{
+      .label-checkbox{
+        color: $gray;
+      }
+    }
+    .input-radio, .input-checkbox {
+      display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+    .label-checkbox{
+      position: relative;
+      padding: 6px 0 6px 43px;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 14px;
+      display: block;
+      color: #1F2428;
+      a{
+        color: #F84CBB;
+      }
+      &:before, &:after{
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+      }
+      &:after{
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        border: 1px solid #D4D7E6;
+        left: 0;
+        top: 0;
+      }
+      &:before{
+        left: 9px;
+        top: 6px;
+        width: 9px;
+        height: 12px;
+        transform: rotate(-45deg);
+        z-index: 2;
+        border-bottom: 1px solid #F84CBB;
+        border-left: 1px solid #F84CBB;
+        transition: all ease .1s;
+        opacity: 0;
+      }
+    }
+    .label-radio{
+      position: relative;
+      padding-left: 43px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 16px;
+      color: #231F20;
+      img{
+        margin-left: 15px;
+      }
+      &:before, &:after{
+        position: absolute;
+        content: '';
+        border-radius: 100%;
+        top: 50%;
+      }
+      &:after{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #D4D7E6;
+        left: 0;
+        margin-top: -15px;
+        box-sizing: border-box;
+      }
+      &:before{
+        left: 9px;
+        width: 12px;
+        height: 12px;
+        background: #F84CBB;
+        transition: all ease 300ms;
+        opacity: 0;
+        margin-top: -6px;
+      }
+    }
+  }
+  .input-radio:checked + .label-radio:before,
+  .input-checkbox:checked + .label-checkbox:before {
+    opacity: 1;
+  }
+  .input-radio:checked + .label-radio:after,
+  .input-checkbox:checked + .label-checkbox:after {
+    border-color: #F84CBB;
+
+  }
+  .btn-primary{
+    font-weight: 700;
+    font-size: px(15);
+    line-height: px(20);
+    text-align: center;
+    color: #FFFFFF;
+    padding: px(18) px(72);
+    background: #F84CBB;
+    box-shadow: 0px px(4) px(4) rgba(219, 62, 190, 0.2);
+    border-radius: px(120);
+  }
+}

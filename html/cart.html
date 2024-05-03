@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+	@@include('./includes/_head.html')
+	<link rel="stylesheet" href="../static/css/slick.css">
+</head>
+<body>
+	@@include('./includes/_header.html')
+	<div class="page-content">
+		<div class="text-page">
+			<div class="container">
+				<div class="product-cart">
+					<div class="product-cart__title">
+						Jūsų užsakymas
+					</div>
+					<div class="cart-wrap">
+						<div class="cart-item">
+							<div class="cart-item__media">
+								<img src="../static/images/general/product-1.jpg" alt="">
+							</div>
+							<div class="cart-item__desc">
+								<div class="cart-item__title">Skystas muilas</div>
+								<div class="cart-item__type">Braškių</div>
+							</div>
+							<div class="cart-item__price">€ 360.00</div>
+							<div class="cart-item__count">
+								<span>2</span> pc
+							</div>
+							<div class="cart-item__price-total">€ 720.00</div>
+							<div class="cart-item__remove">
+								<svg class="icon">
+									<use xlink:href="#ic-remove"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="cart-item">
+							<div class="cart-item__media">
+								<img src="../static/images/general/product-1.jpg" alt="">
+							</div>
+							<div class="cart-item__desc">
+								<div class="cart-item__title">Skystas muilas</div>
+								<div class="cart-item__type">Braškių</div>
+							</div>
+							<div class="cart-item__price">€ 360.00</div>
+							<div class="cart-item__count">
+								<span>2</span> pc
+							</div>
+							<div class="cart-item__price-total">€ 720.00</div>
+							<div class="cart-item__remove">
+								<svg class="icon">
+									<use xlink:href="#ic-remove"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="total">
+						<div class="total-title">Iš viso:</div>
+						<div class="total-price">€ 1080</div>
+					</div>
+				</div>
+				<div class="product-form">
+					<div class="product-cart__title">
+						Pirkėjo informacija:
+					</div>
+					<div class="product-form__wrap">
+						<form>
+							<label class="label">
+								<span>Tavo vardas:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label">
+								<span>Pavardė:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label">
+								<span>Šoninė:</span>
+								<select name="order-country">
+									<option value="Lietuva 1">Lietuva</option>
+									<option value="Lietuva 2">Lietuva</option>
+									<option value="Lietuva 3">Lietuva</option>
+								</select>
+							</label>
+							<label class="label">
+								<span>Apskritis:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label label-half">
+								<span>Pašto indeksas:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label label-half">
+								<span>Miestas:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label">
+								<span>Gatvė, namo numeris, buto numeris:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label">
+								<span>Atsiuntimo metodas:</span>
+								<select name="order-method">
+									<option value="Lietuva 4">Pašto automatas Baisagala NORFA</option>
+									<option value="Lietuva 5">Lietuva</option>
+									<option value="Lietuva 6">Lietuva</option>
+								</select>
+							</label>
+							<label class="label">
+								<span>Telefonas:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<label class="label">
+								<span>Emai:</span>
+								<input class="input" type="text" name="order-name" placeholder="">
+							</label>
+							<div class="modal-group">
+								<input type="radio" name="payment-paysera" id="payment" class="input-radio">
+								<label for="payment" class="label-radio">
+									Mokėti per e-bankininkystę
+									<img src="../static/images/general/paysera.png" alt="">
+								</label>
+							</div>
+							<div class="modal-group">
+								<input type="checkbox" class="input-checkbox" id="politic-agreement">
+								<label for="politic-agreement" class="label-checkbox">
+									Aš perskaičiau ir sutinku su puslapio <a href="#">parduotuvės taisyklėmis</a> bei <a href="#">privatumo politika</a>
+								</label>
+							</div>
+							<button type="submit" class="btn btn-primary">
+								<span>Mokėti</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	@@include('./includes/_footer.html')
+<!--end-page-wrapper-->
+<div class="hidden">
+    @@include('./includes/symbol/icons.html')
+</div>
+@@include('./includes/_scripts.html')
+</body>
+</html>
